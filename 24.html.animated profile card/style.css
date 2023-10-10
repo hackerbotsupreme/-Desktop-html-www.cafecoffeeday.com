@@ -1,0 +1,53 @@
+/* <!-- website 9 -- online tuotorials -- animated profile card ui design using html and css --> */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'poppins',sans-serif ;
+
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #333;
+
+}
+.card{
+    position: relative;
+    width: 350px;
+    height: 190px;
+    background: #333;
+    transition: 0.5s;
+
+}
+.card:hover{
+    height: 450px;
+
+}
+.card .lines{
+    position: absolute;
+    inset: 0;
+    background: #000;
+    overflow: hidden;
+}
+.card .lines::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 600px;
+    height: 120px;
+    background: linear-gradient(transparent, #45f3ff, #45f3ff #45f3ff,transparent);
+    animation: animate 4s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
+}
